@@ -79,8 +79,8 @@ public class login extends HttpServlet {
 				HttpSession sess=request.getSession();
 				sess.setAttribute("LoginUser", rs1.getString("id"));
 				//System.out.println("this is database id:"+rs1.getString("id"));
-				response.getWriter().append("恭喜你登录成功！");
-//				request.getRequestDispatcher("/index.jsp").forward(request, response);   //跳转到index页面
+//				response.getWriter().append("恭喜你登录成功！");
+				request.getRequestDispatcher("/index.jsp").forward(request, response);   //跳转到index页面
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
